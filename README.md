@@ -1,5 +1,6 @@
 # Official code for SINDER: Repairing the Singular Defects of DINOv2 (ECCV 2024)
 
+[![🦢 - Paper](https://img.shields.io/badge/🦢-Paper-red)](https://arxiv.org/abs/2407.16826)
 
 ![SINDER](./resources/high_norm.jpg)
 
