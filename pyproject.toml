@@ -12,3 +12,6 @@ dependencies = [
 
 # Enables the usage of setuptools_scm
 [tool.setuptools_scm]
+
+[tools.setuptools]
+py-modules = []

@@ -217,5 +217,3 @@ dependencies:
   - zlib=1.3.1
   - zstandard=0.23.0
   - zstd=1.5.6
-  - pip:
-      - sinder==0.1.dev3+gb71f72a.d20240720
