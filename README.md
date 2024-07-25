@@ -21,6 +21,7 @@ year = {2024}
 ```bash
 conda env create -f environment.yml
 conda activate sinder
+pip install -e .
 ```
 
 ## Train
