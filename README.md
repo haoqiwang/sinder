@@ -33,3 +33,5 @@ Put ImageNet-1K dataset at `data/imagenet` folder.
 ```
 
 ## Checkpoints
+
+[Google Drive](https://drive.google.com/file/d/1g0Aq5qXYuMmVrN9-gGwC9ybwlCDFAw-l/view?usp=sharing)
