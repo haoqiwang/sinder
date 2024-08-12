@@ -1,4 +1,4 @@
-# Official code for SINDER: Repairing the Singular Defects of DINOv2 (ECCV 2024)
+# Official code for SINDER: Repairing the Singular Defects of DINOv2 (ECCV 2024 Oral)
 
 [![🦢 - Paper](https://img.shields.io/badge/🦢-Paper-red)](https://arxiv.org/abs/2407.16826)
 
