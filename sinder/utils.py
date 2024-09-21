@@ -51,13 +51,16 @@ def get_tokens(model, image, blocks=1):
     return tokens
 
 
-def load_model(model_name):
+def load_model(model_name, checkpoint=None):
     print(f'using {model_name} model')
     model = torch.hub.load(
         repo_or_dir=Path(sinder.__file__).parent.parent,
         source='local',
         model=model_name,
     )
+    if checkpoint is not None:
+        states = torch.load(checkpoint, map_location='cpu')
+        model.load_state_dict(states, strict=False)
     model = model.cuda()
     model.eval()
     model.interpolate_antialias = True
