@@ -71,23 +71,26 @@ def make_transform(
 
 
 class VisualDataset(Dataset):
-    def __init__(self, transform):
+    def __init__(self, transform, imgs=None):
         self.transform = transform
-        self.files = [
-            Image.new('RGB', (37 * 14, 37 * 14), (255, 255, 255)),
-            Image.open('resources/example.jpg').convert('RGB'),
-            Image.open('resources/villa.png').convert('RGB'),
-            Image.open('resources/000000037740.jpg').convert('RGB'),
-            Image.open('resources/000000064359.jpg').convert('RGB'),
-            Image.open('resources/000000066635.jpg').convert('RGB'),
-            Image.open('resources/000000078420.jpg').convert('RGB'),
-        ]
+        if imgs is None:
+            self.files = [
+                'resources/example.jpg',
+                'resources/villa.png',
+                'resources/000000037740.jpg',
+                'resources/000000064359.jpg',
+                'resources/000000066635.jpg',
+                'resources/000000078420.jpg',
+            ]
+        else:
+            self.files = imgs
 
     def __len__(self):
         return len(self.files)
 
     def __getitem__(self, index):
         img = self.files[index]
+        img = Image.open(img).convert('RGB')
         if self.transform:
             img = self.transform(img)
         return img
@@ -123,5 +126,5 @@ def load_visual_data(args, model):
     transform = make_transform(
         args.visual_size, model.patch_size, max_edge_size=1792
     )
-    dataset = VisualDataset(transform=transform)
+    dataset = VisualDataset(transform=transform, imgs=vars(args).get('imgs'))
     return dataset

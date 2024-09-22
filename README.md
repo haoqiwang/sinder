@@ -32,6 +32,16 @@ Put ImageNet-1K dataset at `data/imagenet` folder.
 ./main.py
 ```
 
+## Visualize
+
+```bash
+# visualize original dinov2
+./visualize.py resources/example.jpg
+
+# visualize sinder, ckpt download link below
+./visualize.py resources/example.jpg --checkpoint path/to/sinder.pth
+```
+
 ## Checkpoints
 
 [Google Drive](https://drive.google.com/file/d/1g0Aq5qXYuMmVrN9-gGwC9ybwlCDFAw-l/view?usp=sharing)
